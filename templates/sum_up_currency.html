@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum up Multiple Currency</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/feature.css">
+</head>
+<body>
+    <h1>Sum up Multiple Currency</h1>
+    <div class="container">
+        <div class="description">
+            <p>In this option, you can upload multiple normal images of the currencies, 
+                we will identify each note and display the total amount of currency shown.
+                The possible Predictions are any value greater or equal to zero. In this 
+                we dont check if the currency is real, to keep the dashboard simple. This
+                is only to demonstrate the sum up feature.
+            </p>
+        </div>
+        <div class="form">
+            <form id="image-form" method="POST" enctype="multipart/form-data">
+                <label for="images">Upload Multiple Images of Currency:</label>
+                <input type="file" name="images" id="images" multiple><br>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            {% if prediction %}
+                <p>The predicted value is {{ prediction }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
