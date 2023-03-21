@@ -17,6 +17,23 @@ def sum_up(uv_image, image):
         return value
     return 0
 
+def classify(image, uv_image):
+    value = identify(image)
+    #change value later
+    value = '20'
+    classification = classify_image(uv_image, value)
+    return classification
+
+def classify_image(uv_image, value):
+    rgb = cv2.cvtColor(uv_image, cv2.COLOR_BGR2RGB)
+    resized = tf.image.resize(rgb, (120, 120))
+    model = keras.models.load_model('models/fake-' + value + '.h5')
+    yhat = model.predict(np.expand_dims(resized / 255, 0))
+    if yhat[0] > 0.99:
+        return 'Real'
+    else:
+        return 'Fake'
+
 def predict_value(model, image):
     # Preprocess the image
     image = cv2.resize(image, (512, 512))
