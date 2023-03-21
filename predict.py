@@ -4,6 +4,19 @@ import cv2
 import numpy as np
 import identify_note as note
 
+def identify(image):
+    model = keras.models.load_model("models/latest_inceptionv3.h5")
+    return predict_value(model, image)
+
+def sum_up(uv_image, image):
+    value = identify(image)
+    #change value later
+    value = '20'
+    classification = classify_image(uv_image, value)
+    if classification:
+        return value
+    return 0
+
 def predict_value(model, image):
     # Preprocess the image
     image = cv2.resize(image, (512, 512))
