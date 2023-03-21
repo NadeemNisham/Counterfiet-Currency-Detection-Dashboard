@@ -29,6 +29,17 @@ def sum_up_currency():
         return render_template('sum_up_currency.html', prediction=sum)
     else:
         return render_template('sum_up_currency.html')
-
+    
+@app.route('/classify_note', methods=['GET', 'POST'])
+def classify_note():
+    if request.method == 'POST':
+        file = request.files['image']
+        uv_file = request.files['uv-image']
+        image = cv2.imdecode(np.fromstring(file.read(), np.uint8), cv2.IMREAD_COLOR)
+        uv_image = cv2.imdecode(np.fromstring(uv_file.read(), np.uint8), cv2.IMREAD_COLOR)
+        prediction = classify(image, uv_image)
+        return render_template('classify_note.html', prediction=prediction)
+    else:
+        return render_template('classify_note.html')
 if __name__ == '__main__':
     app.run(debug=True)
