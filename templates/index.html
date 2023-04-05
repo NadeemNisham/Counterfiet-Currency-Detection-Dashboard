@@ -1,57 +1,286 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>BlindTrust</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BlindTrust</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/favicon.png" rel="icon">
+  <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <div class="navbar">
-            <div class="logo"></div>
-            <ul>
-                <li><a id="home" onclick="location.href='/'">Home</a></li>
-                <li><a id="identify" onclick="location.href='/identify_currency'">Identify Currency</a></li>
-                <li><a id="classify" onclick="location.href='/classify_note'">Classify Currency</a></li>
-                <li><a id="summing" onclick="location.href='/sum_up_currency'">Sum Up Currency</a></li>
-            </ul>
+
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="/"><span>BlindTrust</span></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="/">Home</a></li>
+          <li><a href="/identify_currency">Identify Currency</a></li>
+          <li><a href="/classify_note">Classify Currency</a></li>
+          <li><a href="/sum_up_currency">SumUp Currency</a></li>
+          <li><a href="/about_us">About Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>BlindTrust</span></h2>
+          <p class="animate__animated animate__fadeInUp">This is a simple website created to demonstrate the functionalities of 
+            our BlindTrust project, which is a IoT device that helps visually 
+            impaired people Identify, Classify & Sumup Sri Lankan Currency.</p>
         </div>
-        <div class="description">
-            <div id="home-des" class="specific-des active">
-                <h1>BlindTrust</h1>
-                <p>This is a simple website created to demonstrate the functionalities of 
-                    our BlindTrust project, which is a IoT device that helps visually 
-                    impaired people Identify, Classify & Sumup Sri Lankan Currency.
-                </p>
-                <h1>About Us</h1>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="identify.html">Identify</a></h4>
+              <p class="description">You must upload a normal image of a currency, then we
+                will predict what the note is and display the prediction.</p>
             </div>
-            <div id="identify-des" class="specific-des">
-                <h1>Identify Currency</h1>
-                <p>In this option, you must upload a normal image of a currency, then we
-                    will predict what the note is and display the prediction. The 
-                    possible Predictions are Rs.20, Rs.50, Rs.100, Rs.500, Rs.1000,
-                    Rs.5000. This is only used to demonstrate the identify Curency feature.
-                </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="classify.html">Classify</a></h4>
+              <p class="description">you must upload two images, a normal
+                image of the currency and an image of the currency 
+                under UV light, then we will predict is the note is real or fake.</p>
             </div>
-            <div id="classify-des" class="specific-des">
-                <h1>Classify Currency</h1>
-                <p>In this option, you must upload two images, one of which is a normal
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="sumup.html">Sum Up</a></h4>
+              <p class="description">you can upload multiple normal images of the currencies, 
+                we will identify each note and display the total amount of currency shown.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <!-- <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h3>Identify Currency</h3>
+            <p class="fst-italic">
+              In this feature, you must upload a normal image of a currency, then we
+              will predict what the note is and display the prediction. The 
+              possible Predictions are Rs.20, Rs.50, Rs.100, Rs.500, Rs.1000,
+              Rs.5000. This is only used to demonstrate the identify Currency feature.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Upload a Currency Image</li>
+              <li><i class="bi bi-check"></i> Get the Identidication Predicted by the Model</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h3>Classify Currency</h3>
+            <p class="fst-italic">
+              In this feature, you must upload two images, one of which is a normal
                     image of the currency, and the other being an image of the currency 
                     under UV light, then we will predict is the note is real or fake. The 
                     possible Predictions are Real and Fake. This is only to demonstrate the
                     classifying currency feature.
-                </p>
-            </div>
-            <div id="summing-des" class="specific-des">
-                <h1>Sum Up Currency</h1>
-                <p>In this option, you can upload multiple normal images of the currencies, 
-                    we will identify each note and display the total amount of currency shown.
-                    The possible Predictions are any value greater or equal to zero. In this 
-                    we dont check if the currency is real, to keep the dashboard simple. This
-                    is only to demonstrate the sum up feature.
-                </p>
-            </div>
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Upload a Normal Currency Image & a Image under UV Light</li>
+              <li><i class="bi bi-check"></i> Get the Classifictaion Predicted by the Model</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3>Sum Up Currency</h3>
+            <p>In this feature, you can upload multiple normal images of the currencies, 
+              we will identify each note and display the total amount of currency shown.
+              The possible Predictions are any value greater or equal to zero. In this 
+              we dont check if the currency is real, to keep the dashboard simple. This
+              is only to demonstrate the sum up feature.</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Upload Muliply Normal Images of Currency</li>
+              <li><i class="bi bi-check"></i> Get the Total Sum Predicted by the Model</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Idenify Currency</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Classify Currency</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sum Up Currency</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Identify Currency</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Classify Currency</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sum Up Currency</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Add<br>
+              the<br>
+              Address <br><br>
+              <strong>Phone:</strong> add number<br>
+              <strong>Email:</strong> add email<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Moderna</h3>
+            <p>This is a simple website created to demonstrate the functionalities of our BlindTrust project,
+               which is a IoT device that helps visually impaired people Identify, Classify & Sumup Sri Lankan Currency.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <script src="../static/js/script.js"></script>
+    
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../static/assets/vendor/aos/aos.js"></script>
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
 </body>
+
 </html>

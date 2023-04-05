@@ -1,12 +1,11 @@
 from keras.models import load_model
-import tensorflow as tf
 import tensorflow.keras.preprocessing.image as preprocess
 import pandas as pd
 import numpy as np
 
 print(">> Loading model >>")
 # Load the saved models
-model = load_model("models/latest_inceptionv3.h5")
+model = load_model("D:\College Material\Lectures\Year 2\Semester 2\CM2603 - Data Science Group Project\Project\dashboard test\models\identify.h5")
 
 
 def predict_value(model, image):
