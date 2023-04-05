@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Identify Currency</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/feature.css">
+</head>
+<body>
+    <h1>Identify Currency</h1>
+    <div class="container">
+        <div class="description">
+            <p>In this option, you must upload a normal image of a currency, then we
+                will predict what the note is and display the prediction. The 
+                possible Predictions are Rs.20, Rs.50, Rs.100, Rs.500, Rs.1000,
+                Rs.5000. This is only used to demonstrate the identify Curency feature.
+            </p>
+        </div>
+        <div class="form">
+            <form method="POST" enctype="multipart/form-data">
+                <label for="image">Upload an image of the currency:</label>
+                <input type="file" name="image">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            {% if prediction %}
+            <p>The predicted value is {{ prediction }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
